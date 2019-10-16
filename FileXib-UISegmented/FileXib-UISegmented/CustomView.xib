@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView" customModule="FileXib_UISegmented" customModuleProvider="target">
+            <connections>
+                <outlet property="mytableView" destination="2eF-wI-FAD" id="POW-y9-8cc"/>
+                <outlet property="segmentControll" destination="3OA-5d-Te8" id="MYd-ZC-zwY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3OA-5d-Te8">
+                    <rect key="frame" x="8" y="52" width="398" height="29"/>
+                    <segments>
+                        <segment title="Chi tiết"/>
+                        <segment title="Thiết bị"/>
+                        <segment title="Sự cố nguyên nhân"/>
+                    </segments>
+                    <connections>
+                        <action selector="SegmentControll:" destination="-1" eventType="valueChanged" id="Pyd-8f-ibA"/>
+                    </connections>
+                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2eF-wI-FAD">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3OA-5d-Te8" secondAttribute="trailing" constant="8" id="2Th-jO-h7d"/>
+                <constraint firstItem="2eF-wI-FAD" firstAttribute="top" secondItem="3OA-5d-Te8" secondAttribute="bottom" constant="8" id="CSc-oL-DM9"/>
+                <constraint firstItem="2eF-wI-FAD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Pq8-Qi-KmD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2eF-wI-FAD" secondAttribute="trailing" id="bpD-BO-BF2"/>
+                <constraint firstItem="3OA-5d-Te8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="eIY-i0-ciz"/>
+                <constraint firstItem="3OA-5d-Te8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="rgT-mr-WvD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="2eF-wI-FAD" secondAttribute="bottom" id="zPs-WS-bdf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>
