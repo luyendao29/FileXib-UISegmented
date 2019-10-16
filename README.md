@@ -1,0 +1,2 @@
+# FileXib-UISegmented
+Xib UiView
